@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet Balance Checker</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crypto Wallet Balance Checker</h1>
+    <input type="text" id="walletAddress" placeholder="Enter wallet address">
+    <input type="text" id="cryptoAsset" placeholder="Enter crypto asset (e.g., ETH)">
+    <button onclick="getBalance()">Check Balance</button>
+    <button onclick="clearInput()">Clear</button>
+    <p id="balance">Balance will be shown here</p>
+
+    <table id="balanceTable">
+        <tr>
+            <th>Crypto Asset</th>
+            <th>Wallet Address</th>
+            <th>Balance in Crypto</th>
+            <th>Value (USD)</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <p>Total Value in USD: <span id="totalUsdValue">0</span> USD</p>
+
+    <script src="app.js"></script>
+</body>
+</html>
